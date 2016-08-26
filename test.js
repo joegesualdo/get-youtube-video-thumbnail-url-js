@@ -1,6 +1,7 @@
 import test from 'ava';
-import @joegesualdo/get-youtube-video-thumbnail-url-js from './dist'
+import getThumbnailUrl from './dist';
 
 test(t => {
-    t.deepEqual([1, 2], [1, 2]);
+  const url = getThumbnailUrl('wHkK6mbFUTk', 'xlarge');
+  t.deepEqual(url, 'https://i.ytimg.com/vi/wHkK6mbFUTk/maxresdefault.jpg');
 });

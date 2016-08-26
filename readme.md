@@ -1,51 +1,43 @@
 ## @joegesualdo/get-youtube-video-thumbnail-url-js [![Build Status](https://travis-ci.org/joegesualdo/get-youtube-video-thumbnail-url-js.svg?branch=master)](https://travis-ci.org/joegesualdo/get-youtube-video-thumbnail-url-js)
 > Get the thumbnail image for a youtube video.
 
-## Highlights
-
-- Highlight 1
-- Highlight 2
-- Highlight 3
-
 ## Install
 ```
-$ npm install --save @joegesualdo/get-youtube-video-thumbnail-url-js 
+$ npm install --save @joegesualdo/get-youtube-video-thumbnail-url-js
 ```
 
 ## Usage
 ```javascript
-var @joegesualdo/getYoutubeVideoThumbnailUrlJs = require("@joegesualdo/getYoutubeVideoThumbnailUrlJs").default
+import getThumbnailUrl from '@joegesualdo/get-youtube-video-thumbnail-url-js';
 
-// insert code example here
+getThumbnailUrl('wHkK6mbFUTk', 'xlarge');
+//=> https://i.ytimg.com/vi/wHkK6mbFUTk/maxresdefault.jpg
 ```
 
-## Test
-```
-$ npm test
-```
 ## API
-### `methodName(arg1, arg2)`
-> What does this method do?
+### `getYoutubeVideoThumbnailUrl(videoId, [size])`
+> Get the image url of the thumbnail
 
 | Name | Type | Description |
 |------|------|-------------|
-| arg1 | `Array` | Test description|
-| arg2 | `String` | Test description|
+| videoId | `String` | The id of the youtube video|
+| size | `String` | The image size you want. The options are `small`, `medium`, `large`, and `xlarge`|
 
-Returns: `Array`, of things
+Returns: `String`, the url of the thumbnail
 
 ```javascript
-var @joegesualdo/getYoutubeVideoThumbnailUrlJs = require("@joegesualdo/get-youtube-video-thumbnail-url-js").default
+import getThumbnailUrl from '@joegesualdo/get-youtube-video-thumbnail-url-js';
 
-// insert method example here
+getThumbnailUrl('wHkK6mbFUTk', 'xlarge');
+//=> https://i.ytimg.com/vi/wHkK6mbFUTk/maxresdefault.jpg
+```
+## Test
+```
+$ npm test
 ```
 ## Build
 ```
 $ npm run build
 ```
-
-## Related
-- [example-package]() - Add description of the example package here.
-
 ## License
 MIT © [Joe Gesualdo]()
